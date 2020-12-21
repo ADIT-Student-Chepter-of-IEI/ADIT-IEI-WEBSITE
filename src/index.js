@@ -19,7 +19,7 @@ import Dropdown from './main/dropdown';
 function Main() {
   const [click, setClick]=useState(false);
   const [dropdown, setDropdown]=useState(false);
-  const [phonedropdown, setPhoneDropdown]=useState(false);
+  const [phoneDropDown, setPhoneDropDown]=useState(false);
   const [clickbtn, setClickbtn] = useState(false);
   const handleClickbtn = () => {
       setClick(false);
@@ -29,19 +29,19 @@ function Main() {
   const dropdownClick = () => {
     if(window.innerWidth < 767.98){
       setDropdown(false);
-      setPhoneDropdown(false);
+     // setPhoneDropDown(false);
     }else{
       setDropdown(true);
-      setPhoneDropdown(false);
+      //setPhoneDropDown(false);
     }
   }
   const onMouseEnter = () => {
     if(window.innerWidth < 767.98){
       setDropdown(false);
-      setPhoneDropdown(false);
+     // setPhoneDropDown(false);
     }else{
       setDropdown(true);
-      setPhoneDropdown(false);
+     // setPhoneDropDown(false);
     }
   };
   const onMouseLeave = () => {
@@ -49,12 +49,13 @@ function Main() {
       setDropdown(false);
     }else{
       setDropdown(false);
-      setPhoneDropdown(false);
+     // setPhoneDropDown(false);
     }
   };
-  const phonedropdownOpen = () =>{
-    setPhoneDropdown(!phonedropdown);
-   }
+ 
+  const clickedevent = () => {
+    setPhoneDropDown(!phoneDropDown);
+  }
   
   return <div className="main">
 
@@ -65,22 +66,22 @@ function Main() {
         </div>
         <Link to="/ADIT-IEI-WEBSITE" onClick={closeClick} className="nav-link"><img src={logo} alt="logo" className="navbar-logo d-inline-block"/></Link>
         <ul className={click ? 'nav-menus active navbar-nav mr-auto container' : 'nav-menus navbar-nav mr-auto container'}>
-          <li className="nav-item active nav-items">
-            <Link to="/ADIT-IEI-WEBSITE" onClick={closeClick} className="nav-link nav-links">Home</Link>
+          <li className="nav-item active nav-items menu-top">
+            <Link to="/ADIT-IEI-WEBSITE" onClick={closeClick} className="nav-link nav-links ">Home</Link>
           </li>
           <li className="nav-item  nav-items"
               onMouseEnter={onMouseEnter}
               onMouseLeave={onMouseLeave}
               onClick={dropdownClick}
           >
-            <Link to="/ADIT-IEI-WEBSITE/event/presentEvent" onClick={window.innerWidth > 767.98 ? closeClick : phonedropdownOpen} className="nav-link nav-links" for="si"> 
+            <Link to="/ADIT-IEI-WEBSITE/event/presentEvent" onClick={window.innerWidth > 767.98 ? closeClick : clickedevent} className="nav-link nav-links" > 
                Event &nbsp;
-               <i className="fa fa-caret-down"></i>
+               <i className={phoneDropDown || dropdown ? "fa fa-caret-up" : "fa fa-caret-down"}></i>
             </Link>
-            { dropdown && <Dropdown id="si"></Dropdown> }
+            { dropdown && <Dropdown></Dropdown> }
           </li>
-           {phonedropdown && (
-              (
+           {phoneDropDown && (
+              
                 <div>
                   <ul
                     onClick={handleClickbtn}
@@ -101,7 +102,7 @@ function Main() {
                     })}
                   </ul>
                 </div>
-              ) 
+               
           )}
           <li className="nav-item nav-items">
             <Link to="/ADIT-IEI-WEBSITE/gallery" onClick={closeClick} className="nav-link nav-links">Gallery</Link>
@@ -112,12 +113,21 @@ function Main() {
            <li className="nav-item nav-items">
             <Link to="/ADIT-IEI-WEBSITE/history" onClick={closeClick} className="nav-link nav-links">about us</Link>
           </li>
-          <li className="nav-item nav-items">
+          <li className="nav-item nav-items menu-bottom">
             <Link to="/ADIT-IEI-WEBSITE/contact" onClick={closeClick} className="nav-link nav-links">Core Team</Link>
           </li>
         </ul>
       </nav>
+      {/* <!--Facebook--> */}
+
     </div>
+{/* <div class="icon-bar">
+  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+  <a href="#" class="google"><i class="fa fa-google"></i></a>
+  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+  <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+</div> */}
       <Switch>
         <Route exact path="/ADIT-IEI-WEBSITE" component={Home}></Route>
         <Route path="/ADIT-IEI-WEBSITE/event/presentEvent" component={presentEvent}></Route>
