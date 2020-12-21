@@ -19,183 +19,53 @@ function IEIMembership(){
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                <th scope="row"  className="boo">1</th>
-                        <td>Divyakumar Solanki</td>
-                        <td>divyasolanki98@gmail.com</td>
-                        <td>93794382</td>
-                        <td>
-                        Adaptive Signal Processing, Embedded Systems
-                        </td>
-                </tr>
-                <tr>
-                <th scope="row">2</th>
-                <td>Divyakumar Solanki</td>
-                <td>divyasolanki98@gmail.com</td>
-                <td>93794382</td>
-                <td>
-                        Adaptive Signal Processing, Embedded Systems
-                </td>
-                </tr>
-                <tr>
-                <th scope="row">3</th>
-                <td>Divyakumar Solanki</td>
-                <td>divyasolanki98@gmail.com</td>
-                <td>93794382</td>
-                <td>
-                        Adaptive Signal Processing, Embedded Systems
-                </td>
-                </tr>
-                <tr>
-                <th scope="row">4</th>
-                <td>Divyakumar Solanki</td>
-                <td>divyasolanki98@gmail.com</td>
-                <td>93794382</td>
-                <td>
-                        Adaptive Signal Processing, Embedded Systems
-                </td>
-                </tr>
-                <tr>
-                <th scope="row">5</th>
-                <td>Divyakumar Solanki</td>
-                <td>divyasolanki98@gmail.com</td>
-                <td>93794382</td>
-                <td>
-                        Adaptive Signal Processing, Embedded Systems
-                </td>
-                </tr>
-                <tr>
-                <th scope="row">6</th>
-                <td>Divyakumar Solanki</td>
-                <td>divyasolanki98@gmail.com</td>
-                <td>93794382</td>
-                <td>
-                        Adaptive Signal Processing, Embedded Systems
-                </td>
-                </tr>
-                <tr>
-                <th scope="row">7</th>
-                <td>Divyakumar Solanki</td>
-                <td>divyasolanki98@gmail.com</td>
-                <td>93794382</td>
-                <td>
-                        Adaptive Signal Processing, Embedded Systems
-                </td>
-                </tr>
-                <tr>
-                <th scope="row">8</th>
-                        <td>Divyakumar Solanki</td>
-                        <td>divyasolanki98@gmail.com</td>
-                        <td>93794382</td>
-                        <td>
-                        Adaptive Signal Processing, Embedded Systems
-                        </td>
-                </tr>
-                <tr>
-                <th scope="row">9</th>
-                <td>Divyakumar Solanki</td>
-                <td>divyasolanki98@gmail.com</td>
-                <td>93794382</td>
-                <td>
-                        Adaptive Signal Processing, Embedded Systems
-                </td>
-                </tr>
-                <tr>
-                <th scope="row">10</th>
-                <td>Divyakumar Solanki</td>
-                <td>divyasolanki98@gmail.com</td>
-                <td>93794382</td>
-                <td>
-                        Adaptive Signal Processing, Embedded Systems
-                </td>
-                </tr>
-                <tr>
-                <th scope="row">11</th>
-                <td>Divyakumar Solanki</td>
-                <td>divyasolanki98@gmail.com</td>
-                <td>93794382</td>
-                <td>
-                        Adaptive Signal Processing, Embedded Systems
-                </td>
-                </tr>
-                <tr>
-                <th scope="row">12</th>
-                <td>Divyakumar Solanki</td>
-                <td>divyasolanki98@gmail.com</td>
-                <td>93794382</td>
-                <td>
-                        Adaptive Signal Processing, Embedded Systems
-                </td>
-                </tr>
-                <tr>
-                <th scope="row">13</th>
-                <td>Divyakumar Solanki</td>
-                <td>divyasolanki98@gmail.com</td>
-                <td>93794382</td>
-                <td>
-                        Adaptive Signal Processing, Embedded Systems
-                </td>
-                </tr>
-                <tr>
-                <th scope="row">14</th>
-                <td>Divyakumar Solanki</td>
-                <td>divyasolanki98@gmail.com</td>
-                <td>93794382</td>
-                <td>
-                        Adaptive Signal Processing, Embedded Systems
-                </td>
-                </tr>
+                {
+                    MenberDetail.map((item,index)=>(
+                        <tr>
+                            <th scope="row" key={index}>{item.no}</th>
+                            <td>{item.name}</td>
+                            <td>{item.email}</td>
+                            <td>{item.memberno}</td>
+                            <td>
+                                {item.interest}
+                            </td>
+                        </tr>
+                    ))
+                }  
             </tbody>
         </table>
  
     </div>
 <div className="p">
-<table class="p-table-box ">
-    <tr className="p-table-box-detail ">
-        <th className="p-table-box-detail-head" >Sr.</th>
-        <td className="p-table-box-detail-text">1</td>
-    </tr>
-    <tr className="p-table-box-detail ">
-        <th className="p-table-box-detail-head">Name</th>
-        <td className="p-table-box-detail-text">Jinal Bhanushali</td>
-    </tr>
-    <tr className="p-table-box-detail ">
-        <th className="p-table-box-detail-head" >Email</th>
-        <td className="p-table-box-detail-text">jinalbhanushali0628@gmail.com</td>
-    </tr>
-    <tr className="p-table-box-detail ">
-        <th className="p-table-box-detail-head" >membership-no</th>
-        <td className="p-table-box-detail-text">123456</td>
-    </tr>
-    <tr className="p-table-box-detail ">
-        <th className="p-table-box-detail-head">Area Of Interest</th>
-        <td className="p-table-box-detail-text"> Web Development, Programing, Web Appalication Development</td>
-    </tr>
-            
-</table>
-<table class="p-table-box ">
-    <tr className="p-table-box-detail ">
-        <th className="p-table-box-detail-head" >Sr.</th>
-        <td className="p-table-box-detail-text">1</td>
-    </tr>
-    <tr className="p-table-box-detail ">
-        <th className="p-table-box-detail-head">Name</th>
-        <td className="p-table-box-detail-text">Jinal Bhanushali</td>
-    </tr>
-    <tr className="p-table-box-detail ">
-        <th className="p-table-box-detail-head" >Email</th>
-        <td className="p-table-box-detail-text">jinalbhanushali0628@gmail.com</td>
-    </tr>
-    <tr className="p-table-box-detail ">
-        <th className="p-table-box-detail-head" >membership-no</th>
-        <td className="p-table-box-detail-text">123456</td>
-    </tr>
-    <tr className="p-table-box-detail ">
-        <th className="p-table-box-detail-head">Area Of Interest</th>
-        <td className="p-table-box-detail-text">Web Development, Programing</td>
-    </tr>
-            
-</table>
+{
+    MenberDetail.map((item,index)=>(
+        <table class="p-table-box ">
+            <tr className="p-table-box-detail ">
+                <th className="p-table-box-detail-head" >Sr.</th>
+                <td className="p-table-box-detail-text" key={index}>{item.no}</td>
+            </tr>
+            <tr className="p-table-box-detail ">
+                <th className="p-table-box-detail-head">Name</th>
+                <td className="p-table-box-detail-text">{item.name}</td>
+            </tr>
+            <tr className="p-table-box-detail ">
+                <th className="p-table-box-detail-head" >Email</th>
+                <td className="p-table-box-detail-text">{item.email}</td>
+            </tr>
+            <tr className="p-table-box-detail ">
+                <th className="p-table-box-detail-head" >membership-no</th>
+                <td className="p-table-box-detail-text">{item.memberno}</td>
+            </tr>
+            <tr className="p-table-box-detail ">
+                <th className="p-table-box-detail-head">Area Of Interest</th>
+                <td className="p-table-box-detail-text">{item.interest}</td>
+            </tr>
+                    
+        </table>
+    ))
+}
+
+
     </div>
      {/* <!-- Footer Section  --> */}
 
@@ -204,3 +74,85 @@ function IEIMembership(){
     </div>
 }
 export default IEIMembership;
+
+
+const MenberDetail = [
+    {
+        no:"1",
+        name:"jinal",
+        email:"jinal@gmail.com",
+        memberno:"97357889",
+        interest:"Web Development, Web Application Development" 
+     },
+    {
+        no:"2",
+       name:"Divyakumar Solanki",
+       email:"divyasolanki98@gmail.com",
+       memberno:"93794382",
+       interest:" Adaptive Signal Processing, Embedded Systems" 
+    },{
+        no:"3",
+        name:"jinal",
+        email:"jinal@gmail.com",
+        memberno:"97357889",
+        interest:"Web Development, Web Application Development" 
+     },
+     {
+        no:"4",
+       name:"Divyakumar Solanki",
+       email:"divyasolanki98@gmail.com",
+       memberno:"93794382",
+       interest:" Web Development, Programing, Web Appalication Development" 
+    },{
+        no:"5",
+        name:"jinal",
+        email:"jinal@gmail.com",
+        memberno:"97357889",
+        interest:"Web Development, Web Application Development" 
+     },
+     {
+        no:"6",
+       name:"Divyakumar Solanki",
+       email:"divyasolanki98@gmail.com",
+       memberno:"93794382",
+       interest:" Adaptive Signal Processing, Embedded Systems" 
+    },{
+        no:"7",
+        name:"jinal",
+        email:"jinal@gmail.com",
+        memberno:"97357889",
+        interest:"Web Development, Web Application Development" 
+     },{
+        no:"8",
+        name:"jinal",
+        email:"jinal@gmail.com",
+        memberno:"97357889",
+        interest:"Web Development, Web Application Development" 
+     },
+     {
+        no:"10",
+       name:"Divyakumar Solanki",
+       email:"divyasolanki98@gmail.com",
+       memberno:"93794382",
+       interest:" Web Development, Programing, Web Appalication Development" 
+    },{
+        no:"11",
+        name:"jinal",
+        email:"jinal@gmail.com",
+        memberno:"97357889",
+        interest:"Web Development, Web Application Development" 
+     },
+     {
+        no:"12",
+       name:"Divyakumar Solanki",
+       email:"divyasolanki98@gmail.com",
+       memberno:"93794382",
+       interest:" Adaptive Signal Processing, Embedded Systems" 
+    },{
+        no:"13",
+        name:"jinal",
+        email:"jinal@gmail.com",
+        memberno:"97357889",
+        interest:"Web Development, Web Application Development" 
+     },
+];
